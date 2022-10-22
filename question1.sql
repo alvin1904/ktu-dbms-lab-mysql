@@ -15,12 +15,12 @@ insert into Faculty values(12983, 101, "Darshan S", "M.Tech", 12, "Mech", "Munna
 insert into Faculty values(12986, 102, "Anson Anthrayose Thomas", "M.Tech", 15, "ECE", "Chingavanam, Kottayam");
 insert into Faculty values(12982, 103, "Gokul Das", "M.Tech", 15, "CSE", "Kozhikode");
 insert into Faculty values(12988, 104, "Sreerag M", "B.Tech", 9, "CSE", "Kottakal, Malappuram");
-insert into Faculty values(12983, 105, "Anjali NV", "B.Tech", 16, "CSE", "Kannur");
+insert into Faculty values(12982, 105, "Anjali NV", "B.Tech", 16, "CSE", "Kannur");
 insert into Faculty values(12983, 106, "Aswin US", "M.Tech", 17, "ECE", "Sreevalsom, Trivandrum");
-insert into Faculty values(12986, 107, "Dona Johnson", "B.Tech", 11, "CSE", "Manthuruthy, Kottayam");
+insert into Faculty values(12988, 107, "Dona Johnson", "B.Tech", 11, "CSE", "Manthuruthy, Kottayam");
 
--- select * from Faculty;
--- select * from College;
+select * from Faculty;
+select * from College;
 -- 1
 select c.college_name, f.faculty_name, f.experience
 from Faculty f, College c
@@ -41,8 +41,12 @@ where f.college_code = c.college_code
 GROUP BY f.college_code
 HAVING Count(f.faculty_code) > 1;
 -- 5
-
-
+select count(*) from Faculty group by college_code order by count(*) LIMIT 1 into @varl;
+select count(*) from Faculty group by college_code order by count(*) desc LIMIT 1 into @varh;
+select college_code from Faculty group by college_code having count(*) = @varl into @varlc;
+select college_code from Faculty group by college_code having count(*) = @varh into @varhc;
+select college_name as 'College with least faculty' from College where college_code=@varlc;
+select college_name as 'College with most faculty' from College where college_code=@varhc;
 
 
 drop table Faculty;
