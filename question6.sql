@@ -40,7 +40,7 @@ insert into Savings values (821, 6045, 471083, 23000);
 insert into Savings values (172, 8261, 527949, 25900);
 insert into Savings values (928, 8261, 715031, 22100);
 insert into Savings values (317, 8503, 846611, 29600);
-insert into Savings values (927, 8503, 011323, 29700);
+insert into Savings values (928, 8503, 011323, 29700);
 insert into Savings values (928, 8261, 832197, 27600);
 insert into Savings values (195, 8503, 206816, 11900);
 insert into Savings values (821, 8503, 542234, 22900);
@@ -58,7 +58,7 @@ insert into Loan values (304, 8261, 491911, 100000);
 insert into Loan values (195, 8261, 961914, 500000);
 insert into Loan values (943, 6045, 471345, 250000);
 insert into Loan values (821, 6045, 19784, 100000);
-insert into Loan values (172, 8503, 947941, 250000);
+insert into Loan values (195, 8503, 947941, 250000);
 insert into Loan values (928, 8261, 195031, 1000000);
 insert into Loan values (317, 8503, 449611, 1000000);
 insert into Loan values (927, 8503, 412923, 250000);
@@ -97,12 +97,30 @@ where Loan.lbranch_id = Branch.branch_id and Customer.customer_id = Loan.custome
 select Customer.customer_id as 'With_Savings_account_in_Alappuzha', customer_name, customer_city from Savings, Branch, Customer
 where Savings.sbranch_id = Branch.branch_id and Customer.customer_id = Savings.customer_id and Branch.branch_city = 'Alappuzha';
 
+
 /* PART c */
 
-select * from Customer;
+
+
+
+
+
+
 /* PART d */
+select * , 'Loan Acc only' as 'part d q' from Customer
+where customer_id IN (select customer_id from Loan where customer_id NOT IN (select customer_id from Savings));
+
+select *, 'Savings Acc only' as 'part d q' from Customer
+where customer_id IN (select customer_id from Savings where customer_id NOT IN (select customer_id from Loan));
+
+select *, 'Both Loan & Savings Accs' as 'part d q' from Customer
+where customer_id IN (select DISTINCT customer_id from Loan where customer_id IN (select customer_id from Savings));
+
 
 /* PART e */
+
+
+
 
 /* PART f */
 
