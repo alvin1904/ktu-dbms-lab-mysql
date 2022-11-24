@@ -6,66 +6,89 @@ branch_id INT PRIMARY KEY,
 branch_name VARCHAR(50),
 branch_city VARCHAR(18)
 );
-insert into Branch values (8503, 'Highton', 'Alappuzha');
-insert into Branch values (8261, 'Dupree', 'Ernakulam');
-insert into Branch values (6045, 'Kolczynski', 'Idukki');
-insert into Branch values (2264, 'Forsbey', 'Kannur');
+insert into Branch values
+(401,"Thiruvananthapuram","Thiruvananthapuram"),
+(402,"Kottayam","Kottayam"),
+(403,"Ernakulam","Kochi"),
+(404,"Kozhikode","Kozhikode");
 
 create table Customer (
 customer_id INT PRIMARY KEY,
 customer_name VARCHAR(50),
-customer_city VARCHAR(12)
+customer_city VARCHAR(25)
 );
-insert into Customer values (304, 'Keane', 'Kannur');
-insert into Customer values (195, 'Bess', 'Alappuzha');
-insert into Customer values (943, 'Glynda', 'Idukki');
-insert into Customer values (821, 'Karalynn', 'Alappuzha');
-insert into Customer values (172, 'Caresa', 'Idukki');
-insert into Customer values (928, 'Linet', 'Kannur');
-insert into Customer values (317, 'Royall', 'Kannur');
-insert into Customer values (927, 'Gusta', 'Kannur');
+insert into Customer values
+(6001,"Ananthakrishnan","Thiruvananthapuram"),
+(6002,"Irfan","Thiruvananthapuram"),
+(6003,"Suneeth","Thiruvananthapuram"),
+(6004,"Sreejith","Kottayam"),
+(6005,"Jafar","Kazhakoottam"),
+(6006,"Radika","Pampady"),
+(6007,"Jameela","Kanjikuzhi"),
+(6008,"Bindu","Kottayam"),
+(6009,"Purushothaman","Kollam"),
+(6010,"Vincy","Kottayam"),
+(6011,"Abdul Rahman","Thrissur"),
+(6012,"Vishwanathan","Ernakulam"),
+(6013,"Marykutty","Mattancheri"),
+(6014,"Hajara","Ernakulam"),
+(6015,"Revathy","Kozhikode"),
+(6016,"Hameed","Perambra"),
+(6017,"Suchithra","Kozhikode"),
+(6018,"Saneesh","North Paravoor"),
+(6019,"Gokul Das","Kozhikode"),
+(6020,"Abraham","Kappad");
 
 create table Savings (
 customer_id INT,
 sbranch_id INT,
-savings_accno INT PRIMARY KEY,
+savings_accno INT,
 sbalance INT,
     FOREIGN KEY (customer_id) REFERENCES Customer (customer_id),
     FOREIGN KEY (sbranch_id) REFERENCES Branch (branch_id)
 );
-insert into Savings values (304, 2264, 291818, 2600);
-insert into Savings values (195, 8261, 961213, 23900);
-insert into Savings values (943, 8261, 755345, 100);
-insert into Savings values (821, 6045, 471083, 0);
-insert into Savings values (172, 8261, 527949, 25900);
-insert into Savings values (928, 8261, 715031, 0);
-insert into Savings values (317, 8503, 846611, 200);
-insert into Savings values (928, 8503, 011323, 29700);
-insert into Savings values (928, 8261, 832197, 2600);
-insert into Savings values (195, 8503, 206816, 110);
-insert into Savings values (821, 8503, 542234, 22900);
-insert into Savings values (317, 8503, 526611, 2580);
+insert into Savings values
+(6001,401,6400101,15000),
+(6002,401,6400102,200000),
+(6005,401,6400105,30000),
+(6007,401,6400107,70000),
+(6004,402,6400204,400000),
+(6006,402,6400206,100000),
+(6007,402,6400207,40000),
+(6008,402,6400208,74000),
+(6010,402,6400210,128507),
+(6011,403,6400311,700000),
+(6001,403,6400301,200000),
+(6012,403,6400312,500000),
+(6013,403,6400313,250000),
+(6015,404,6400415,100000),
+(6016,404,6400416,90756);
 
 create table Loan (
 customer_id INT,
 lbranch_id INT,
-loan_accno INT PRIMARY KEY,
+loan_accno INT,
 lbalance INT,
     FOREIGN KEY (customer_id) REFERENCES Customer (customer_id),
     FOREIGN KEY (lbranch_id) REFERENCES Branch (branch_id)
 );
-insert into Loan values (304, 8261, 491911, 100000);
-insert into Loan values (195, 8261, 961914, 500000);
-insert into Loan values (943, 2264, 471345, 250000);
-insert into Loan values (821, 8503, 19784, 100000);
-insert into Loan values (195, 8503, 947941, 250000);
-insert into Loan values (928, 8261, 195031, 1000000);
-insert into Loan values (317, 8503, 449611, 1000000);
-insert into Loan values (927, 8503, 412923, 250000);
-insert into Loan values (928, 2264, 139177, 100000);
-insert into Loan values (195, 2264, 797216, 1000000);
-insert into Loan values (304, 8503, 442931, 250000);
-insert into Loan values (317, 2264, 176691, 500000);
+insert into Loan values
+(6005,401,4600105,100000),
+(6003,401,4600103,200000),
+(6009,401,4600109,150000),
+(6019,401,4600119,100000),
+(6011,403,4600311,1000000),
+(6013,403,4600313,500000),
+(6014,403,4600314,300000),
+(6018,403,4600318,300000),
+(6006,403,4600306,100000),
+(6009,403,4600309,200000),
+(6014,404,4600414,100000),
+(6016,404,4600416,150000),
+(6017,404,4600417,200000),
+(6019,404,4600419,300000),
+(6020,404,4600419,400000),
+(6008,404,4600408,100000);
 
 select * from Branch;
 select * from Savings;
