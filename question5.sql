@@ -3,8 +3,8 @@ use test;
 
 create table Book (
 	accession_no INT PRIMARY KEY,
-	title VARCHAR(25),
-	publisher VARCHAR(7),
+	title VARCHAR(50),
+	publisher VARCHAR(50),
 	year INT,
 	date_of_purchase VARCHAR(10),
 	status VARCHAR(10)
@@ -22,52 +22,96 @@ create table Books_issue (
     FOREIGN KEY (accession_no) REFERENCES Book (accession_no)
 );
 
-insert into Book values (1, 'DSA using Java', 'New Age', 2020, '2021-11-03', 'issued');
-insert into Book values (2, 'DSA using Java', 'New Age', 2020, '2021-11-03', 'issued');
-insert into Book values (3, 'DSA using C++', 'Oxford', 2021, '2021-10-22', 'issued');
-insert into Book values (4, 'DSA using C++', 'Oxford', 2021, '2021-10-22', 'issued');
-insert into Book values (5, 'DSA using Py', 'Oxford', 2021, '2022-07-26', 'issued');
-insert into Book values (6, 'DSA using Py', 'Oxford', 2021, '2022-07-26', 'not_issued');
-insert into Book values (7, 'DSA using Java', 'New Age', 2020, '2021-11-03', 'issued');
-insert into Book values (8, 'DSA using Py', 'Oxford', 2021, '2022-07-26', 'issued');
-insert into Book values (9, 'DSA using Py', 'Oxford', 2021, '2022-07-26', 'issued');
-insert into Book values (10, 'DSA using Java', 'New Age', 2020, '2021-11-03', 'issued');
-insert into Book values (11, 'DSA using Js', 'Oxford', 2020, '2022-04-21', 'issued');
-insert into Book values (12, 'DSA using Java', 'New Age', 2020, '2021-11-03', 'issued');
-insert into Book values (13, 'DSA using C++', 'Oxford', 2021, '2021-10-22', 'issued');
-insert into Book values (14, 'DSA using Py', 'Oxford', 2021, '2022-07-26', 'issued');
-insert into Book values (15, 'DSA using Java', 'New Age', 2020, '2021-11-03', 'issued');
-insert into Book values (16, 'DSA using C++', 'Oxford', 2021, '2021-10-22', 'not_issued');
-insert into Book values (17, 'DSA using C++', 'Oxford', 2021, '2021-10-22', 'issued');
-insert into Book values (18, 'DSA using C++', 'Oxford', 2021, '2021-10-22', 'not_issued');
-insert into Book values (19, 'DSA using Java', 'New Age', 2020, '2021-11-03', 'issued');
-insert into Book values (20, 'DSA using Js', 'Oxford', 2020, '2022-04-21', 'issued');
+INSERT INTO Book VALUES
+("122","MIDNIGHT CHILDREN","SALMAN RUSHDIE","1947","2002-05-18","ISSUED"),
+("123","THE MAGIC MOUNTAIN","THOMAS MANN","1998","2003-05-28","ISSUED"),
+("124","GREAT EXPECTATIONS","CHARLES DICKENS","2005","2008-01-28","ISSUED"),
+("125","LEAVES OF GRASS","WALT WHITMAN","2008","2011-11-26","ISSUED"),
+("126","TRISTRAM SHANDY","LAURENCE STRENE","1996","2002-01-08","ISSUED"),
+("127","DAVID COPPERFIELD","CHARLES DICKENS","1999","2003-02-07","ISSUED"),
+("128","THE AENEID","VIRGIL","2000","2001-12-10","ISSUED"),
+("129","JANE EYRE","CHARLOTTE BRONTE","2010","2011-04-05","ISSUED"),
+("130","THE STRANGER","ALBERT CAMUS","2021","2022-04-12","ISSUED"),
+("131","BELOVED","TONI MORRISON","2004","2021-07-22","ISSUED"),
+("132","MIDDLEMARCH","GEORGE ELIOT","2002","2004-10-21","ISSUED"),
+("133","INVISIBLE MAN","RALPH ELLISON","2006","2007-10-10","ISSUED"),
+("134","MIDNIGHT CHILDREN","SALMAN RUSHDIE","1947","2002-05-18","NOT ISSUED"),
+("135","THE MAGIC MOUNTAIN","THOMAS MANN","1998","2003-05-28","NOT ISSUED"),
+("136","GREAT EXPECTATIONS","CHARLES DICKENS","2005","2008-01-28","NOT ISSUED"),
+("137","LEAVES OF GRASS","WALT WHITMAN","2008","2011-11-26","NOT ISSUED"),
+("138","TRISTRAM SHANDY","LAURENCE STRENE","1996","2002-01-08","NOT ISSUED"),
+("139","DAVID COPPERFIELD","CHARLES DICKENS","1999","2003-02-07","NOT ISSUED"),
+("140","THE AENEID","VIRGIL","2000","2001-12-10","NOT ISSUED"),
+("141","JANE EYRE","CHARLOTTE BRONTE","2010","2011-04-05","NOT ISSUED"),
+("142","THE STRANGER","ALBERT CAMUS","2021","2022-04-12","NOT ISSUED"),
+("143","BELOVED","TONI MORRISON","2004","2021-07-22","NOT ISSUED"),
+("144","MIDDLEMARCH","GEORGE ELIOT","2002","2004-10-21","NOT ISSUED"),
+("145","INVISIBLE MAN","RALPH ELLISON","2006","2007-10-10","NOT ISSUED"),
+("146","MIDNIGHT CHILDREN","SALMAN RUSHDIE","1947","2002-05-18","REFERENCE"),
+("147","THE MAGIC MOUNTAIN","THOMAS MANN","1998","2003-05-28","REFERENCE"),
+("148","GREAT EXPECTATIONS","CHARLES DICKENS","2005","2008-01-28","REFERENCE"),
+("149","LEAVES OF GRASS","WALT WHITMAN","2008","2011-11-26","REFERENCE"),
+("150","TRISTRAM SHANDY","LAURENCE STRENE","1996","2002-01-08","REFERENCE"),
+("151","DAVID COPPERFIELD","CHARLES DICKENS","1999","2003-02-07","REFERENCE"),
+("152","THE AENEID","VIRGIL","2000","2001-12-10","REFERENCE"),
+("153","JANE EYRE","CHARLOTTE BRONTE","2010","2011-04-05","REFERENCE"),
+("154","THE STRANGER","ALBERT CAMUS","2021","2022-04-12","REFERENCE"),
+("155","BELOVED","TONI MORRISON","2004","2021-07-22","REFERENCE"),
+("156","MIDDLEMARCH","GEORGE ELIOT","2002","2004-10-21","REFERENCE"),
+("157","INVISIBLE MAN","RALPH ELLISON","2006","2007-10-10","REFERENCE");
 
-insert into Member values (1, 'Lucian', 1, 3);
-insert into Member values (2, 'Shadow', 1, 9);
-insert into Member values (3, 'Kailey', 2, 3);
-insert into Member values (4, 'Tiffanie', 4, 9);
-insert into Member values (5, 'Nicko', 3, 6);
-insert into Member values (6, 'Huntington', 3, 3);
-insert into Member values (7, 'Stanleigh', 3, 3);
+INSERT INTO Member VALUES
+("2010","JOHN WICK","3","5"),
+("2011","MONKEY D LUFFY","2","6"),
+("2012","TONY STARK","8","8"),
+("2013","STEVEN GRANT ROGERS","1","2"),
+("2014","CLINTON FRANCIS BARTON","2","7"),
+("2015","WANDA MAXIMOFF","4","5"),
+("2016","T CHALLA","1","5"),
+("2017","VICTOR SHADE","4","4"),
+("2018","THOR ODINSON","0","1"),
+("2019","NATASHA ROMANOFF","4","5"),
+("2020","JENNIFER SUSAN","4","5");
 
-insert into Books_issue values (1, 7, '2022-10-04');
-insert into Books_issue values (2, 5, '2022-10-19');
-insert into Books_issue values (3, 3, '2022-10-10');
-insert into Books_issue values (4, 7, '2022-10-14');
-insert into Books_issue values (5, 5, '2022-10-06');
-insert into Books_issue values (7, 2, '2022-10-05');
-insert into Books_issue values (8, 7, '2022-10-07');
-insert into Books_issue values (9, 4, '2022-10-07');
-insert into Books_issue values (10, 1, '2022-10-06');
-insert into Books_issue values (11, 6, '2022-10-05');
-insert into Books_issue values (12, 6, '2022-10-07');
-insert into Books_issue values (13, 5, '2022-10-09');
-insert into Books_issue values (14, 6, '2022-10-15');
-insert into Books_issue values (15, 4, '2022-10-18');
-insert into Books_issue values (17, 4, '2022-10-23');
-insert into Books_issue values (19, 1, '2022-10-01');
-insert into Books_issue values (20, 4, '2022-10-22');
+
+INSERT INTO Books_issue VALUES
+("122","2010","2005-11-18"),
+("123","2010","2022-11-18"),
+("124","2010","2022-11-18"),
+("125","2011","2022-11-18"),
+("126","2011","2022-11-18"),
+("127","2012","2022-11-18"),
+("128","2012","2011-11-18"),
+("129","2012","2022-11-18"),
+("130","2012","2022-11-18"),
+("131","2012","2021-11-18"),
+("132","2012","2022-11-18"),
+("133","2012","2022-11-18"),
+("122","2012","2022-11-18"),
+("123","2013","2022-11-18"),
+("124","2014","2022-11-18"),
+("125","2014","2022-11-18"),
+("126","2015","2022-11-18"),
+("127","2015","2021-11-18"),
+("128","2015","2022-11-18"),
+("129","2015","2022-11-18"),
+("130","2016","2022-11-18"),
+("131","2017","2022-11-18"),
+("132","2017","2022-11-18"),
+("133","2017","2022-11-18"),
+("122","2017","2022-11-18"),
+("123","2017","2022-11-18"),
+("124","2019","2022-11-18"),
+("125","2019","2020-11-18"),
+("126","2019","2022-11-18"),
+("127","2019","2022-11-18"),
+("128","2020","2022-11-18"),
+("129","2020","2022-11-18"),
+("130","2020","2022-11-18"),
+("132","2020","2022-11-18");
+
+
+
 
 /* PART 1 */
 select accession_no, title, publisher
