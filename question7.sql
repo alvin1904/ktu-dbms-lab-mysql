@@ -47,30 +47,30 @@ insert into CourseQualification values ('KTE59XX70', 76, 'secondClass', 2021);
 insert into CourseQualification values ('KTE59XX70', 87, 'firstClass', 2022);
 insert into CourseQualification values ('KTE59XX70', 79, 'secondClass', 2023);
 insert into CourseQualification values ('KTE59XX70', 76, 'secondClass', 2024);
-insert into CourseQualification values ('KTE96XX57', 98, 'distinct', 2021);
-insert into CourseQualification values ('KTE96XX57', 99, 'distinct', 2022);
+insert into CourseQualification values ('KTE96XX57', 98, 'distinction', 2021);
+insert into CourseQualification values ('KTE96XX57', 99, 'distinction', 2022);
 insert into CourseQualification values ('KTE96XX57', 77, 'secondClass', 2023);
 insert into CourseQualification values ('KTE96XX57', 85, 'firstClass', 2024);
 insert into CourseQualification values ('KTE99XX66', 75, 'secondClass', 2018);
-insert into CourseQualification values ('KTE99XX66', 99, 'distinct', 2019);
+insert into CourseQualification values ('KTE99XX66', 99, 'distinction', 2019);
 insert into CourseQualification values ('KTE99XX66', 82, 'firstClass', 2020);
-insert into CourseQualification values ('KTE99XX66', 94, 'distinct', 2021);
+insert into CourseQualification values ('KTE99XX66', 94, 'distinction', 2021);
 insert into CourseQualification values ('KTE05XX60', 80, 'secondClass', 2018);
 insert into CourseQualification values ('KTE05XX60', 81, 'firstClass', 2019);
-insert into CourseQualification values ('KTE05XX60', 92, 'distinct', 2020);
-insert into CourseQualification values ('KTE05XX60', 97, 'distinct', 2021);
-insert into CourseQualification values ('KTE84XX84', 96, 'distinct', 2018);
+insert into CourseQualification values ('KTE05XX60', 92, 'distinction', 2020);
+insert into CourseQualification values ('KTE05XX60', 97, 'distinction', 2021);
+insert into CourseQualification values ('KTE84XX84', 96, 'distinction', 2018);
 insert into CourseQualification values ('KTE84XX84', 77, 'secondClass', 2019);
-insert into CourseQualification values ('KTE84XX84', 97, 'distinct', 2020);
+insert into CourseQualification values ('KTE84XX84', 97, 'distinction', 2020);
 insert into CourseQualification values ('KTE84XX84', 83, 'firstClass', 2021);
 insert into CourseQualification values ('KTE78XX78', 86, 'firstClass', 2018);
 insert into CourseQualification values ('KTE78XX78', 81, 'firstClass', 2019);
 insert into CourseQualification values ('KTE78XX78', 90, 'firstClass', 2020);
-insert into CourseQualification values ('KTE78XX78', 92, 'distinct', 2021);
+insert into CourseQualification values ('KTE78XX78', 92, 'distinction', 2021);
 insert into CourseQualification values ('KTE97XX42', 81, 'firstClass', 2018);
-insert into CourseQualification values ('KTE97XX42', 96, 'distinct', 2019);
-insert into CourseQualification values ('KTE97XX42', 92, 'distinct', 2020);
-insert into CourseQualification values ('KTE97XX42', 92, 'distinct', 2021);
+insert into CourseQualification values ('KTE97XX42', 96, 'distinction', 2019);
+insert into CourseQualification values ('KTE97XX42', 92, 'distinction', 2020);
+insert into CourseQualification values ('KTE97XX42', 92, 'distinction', 2021);
 insert into CourseQualification values ('KTE33XX46', 80, 'secondClass', 2018);
 insert into CourseQualification values ('KTE33XX46', 88, 'firstClass', 2019);
 insert into CourseQualification values ('KTE33XX46', 85, 'firstClass', 2020);
@@ -82,46 +82,46 @@ insert into CourseQualification values ('KTE08XX56', 90, 'firstClass', 2022);
 insert into CourseQualification values ('KTE08XX40', 80, 'secondClass', 2019);
 insert into CourseQualification values ('KTE08XX40', 75, 'secondClass', 2020);
 insert into CourseQualification values ('KTE08XX40', 78, 'secondClass', 2021);
-insert into CourseQualification values ('KTE08XX40', 95, 'distinct', 2022);
+insert into CourseQualification values ('KTE08XX40', 95, 'distinction', 2022);
 insert into CourseQualification values ('KTE22XX47', 87, 'firstClass', 2020);
 insert into CourseQualification values ('KTE22XX47', 84, 'firstClass', 2021);
-insert into CourseQualification values ('KTE22XX47', 97, 'distinct', 2022);
+insert into CourseQualification values ('KTE22XX47', 97, 'distinction', 2022);
 insert into CourseQualification values ('KTE22XX47', 80, 'secondClass', 2023);
 insert into CourseQualification values ('KTE32XX50', 77, 'secondClass', 2018);
 insert into CourseQualification values ('KTE32XX50', 77, 'secondClass', 2019);
 insert into CourseQualification values ('KTE32XX50', 85, 'firstClass', 2020);
 insert into CourseQualification values ('KTE32XX50', 87, 'firstClass', 2021);
-insert into CourseQualification values ('KTE67XX12', 97, 'distinct', 2018);
-insert into CourseQualification values ('KTE67XX12', 99, 'distinct', 2019);
-insert into CourseQualification values ('KTE67XX12', 91, 'distinct', 2020);
+insert into CourseQualification values ('KTE67XX12', 97, 'distinction', 2018);
+insert into CourseQualification values ('KTE67XX12', 99, 'distinction', 2019);
+insert into CourseQualification values ('KTE67XX12', 91, 'distinction', 2020);
 insert into CourseQualification values ('KTE67XX12', 75, 'secondClass', 2021);
-insert into CourseQualification values ('KTE94XX98', 95, 'distinct', 2019);
-insert into CourseQualification values ('KTE94XX98', 100, 'distinct', 2020);
+insert into CourseQualification values ('KTE94XX98', 95, 'distinction', 2019);
+insert into CourseQualification values ('KTE94XX98', 100, 'distinction', 2020);
 insert into CourseQualification values ('KTE94XX98', 84, 'firstClass', 2021);
-insert into CourseQualification values ('KTE94XX98', 100, 'distinct', 2022);
+insert into CourseQualification values ('KTE94XX98', 100, 'distinction', 2022);
 insert into CourseQualification values ('KTE84XX57', 79, 'secondClass', 2021);
 insert into CourseQualification values ('KTE84XX57', 88, 'firstClass', 2022);
 insert into CourseQualification values ('KTE84XX57', 87, 'firstClass', 2023);
-insert into CourseQualification values ('KTE84XX57', 92, 'distinct', 2024);
-insert into CourseQualification values ('KTE52XX11', 92, 'distinct', 2019);
+insert into CourseQualification values ('KTE84XX57', 92, 'distinction', 2024);
+insert into CourseQualification values ('KTE52XX11', 92, 'distinction', 2019);
 insert into CourseQualification values ('KTE52XX11', 80, 'secondClass', 2020);
 insert into CourseQualification values ('KTE52XX11', 87, 'firstClass', 2021);
 insert into CourseQualification values ('KTE52XX11', 80, 'secondClass', 2022);
 insert into CourseQualification values ('KTE63XX38', 81, 'firstClass', 2019);
 insert into CourseQualification values ('KTE63XX38', 80, 'secondClass', 2020);
-insert into CourseQualification values ('KTE63XX38', 97, 'distinct', 2021);
+insert into CourseQualification values ('KTE63XX38', 97, 'distinction', 2021);
 insert into CourseQualification values ('KTE63XX38', 80, 'secondClass', 2022);
-insert into CourseQualification values ('KTE30XX07', 94, 'distinct', 2021);
+insert into CourseQualification values ('KTE30XX07', 94, 'distinction', 2021);
 insert into CourseQualification values ('KTE30XX07', 86, 'firstClass', 2022);
 insert into CourseQualification values ('KTE30XX07', 75, 'secondClass', 2023);
-insert into CourseQualification values ('KTE30XX07', 96, 'distinct', 2024);
+insert into CourseQualification values ('KTE30XX07', 96, 'distinction', 2024);
 insert into CourseQualification values ('KTE99XX47', 86, 'firstClass', 2019);
-insert into CourseQualification values ('KTE99XX47', 96, 'distinct', 2020);
+insert into CourseQualification values ('KTE99XX47', 96, 'distinction', 2020);
 insert into CourseQualification values ('KTE99XX47', 80, 'secondClass', 2021);
-insert into CourseQualification values ('KTE99XX47', 97, 'distinct', 2022);
-insert into CourseQualification values ('KTE64XX48', 96, 'distinct', 2021);
-insert into CourseQualification values ('KTE64XX48', 91, 'distinct', 2022);
-insert into CourseQualification values ('KTE64XX48', 94, 'distinct', 2023);
+insert into CourseQualification values ('KTE99XX47', 97, 'distinction', 2022);
+insert into CourseQualification values ('KTE64XX48', 96, 'distinction', 2021);
+insert into CourseQualification values ('KTE64XX48', 91, 'distinction', 2022);
+insert into CourseQualification values ('KTE64XX48', 94, 'distinction', 2023);
 insert into CourseQualification values ('KTE64XX48', 86, 'firstClass', 2024);
 
 create table ProjectDetails (
@@ -203,14 +203,46 @@ order by guide, year_of_passout;
 /* FIFTH QUESTION */
 /*select branch, year, avg(total)
 from StudentDetails s NATURAL JOIN CourseQualification c
-group by year,s.branch;
+group by year,s.branch
+order by year, avg(total) DESC;
 */
-select t1.year, branch, acadPerformance 
-from (select t1.year, MAX(t1.theAvg) 'acadPerformance'
-	from (select branch, year, avg(total) 'theAvg'
-	from StudentDetails s NATURAL JOIN CourseQualification c
-	group by year,s.branch
-	) as t1
-      group by year) as t2;
+select year, MAX(t1.theAvg) 'acadPerformance'
+from (select c.year, s.branch, avg(total) 'theAvg'
+from StudentDetails s NATURAL JOIN CourseQualification c
+group by c.year,s.branch
+) as t1
+group by year;
+
+/* SIXTH QUESTION */
+select c.year, s.branch, MAX(total)
+from StudentDetails s NATURAL JOIN CourseQualification c
+group by c.year, s.branch
+order by year, branch;
+
+select utyregno, c.year, s.branch, total 
+from StudentDetails s NATURAL JOIN CourseQualification c
+group by c.year, s.branch, utyregno, total
+order by year, branch;
+
+/* SEVENTH QUESTION */
+/* let the academic year be 2021 && grade be distinction */
+select utyregno, name, c.year 'academic_year', c.grades
+from StudentDetails s NATURAL JOIN CourseQualification c
+where c.year = 2021 AND c.grades = 'distinction';
+
+/* EIGTH QUESTION */
+/* let the given core area be CSE */
+select utyregno, title, guide, s.year_of_passout, corearea from ProjectDetails p NATURAL JOIN StudentDetails s
+where corearea = 'CSE'
+order by s.year_of_passout;
+
+/* NINTH QUESTION */
+select 
+
+/* TENTH QUESTION */
+
+/* ELEVENTH QUESTION */
+
+/* TWELFTH QUESTION */
 
 drop database d7;
