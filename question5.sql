@@ -150,7 +150,10 @@ from Book NATURAL JOIN Books_issue
 where title in (select title from Books_issue NATURAL JOIN Book 
 group by title having count(*)=@noofmembers);
 
-
+select DISTINCT Book.title, Book.publisher, Book.year, Book.date_of_purchase
+from Book NATURAL JOIN Books_issue
+where title in (select title from Books_issue NATURAL JOIN Book 
+group by title having count(*)=0);
 
 drop table Member;
 drop table Books_issue;

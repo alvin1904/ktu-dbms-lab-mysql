@@ -90,10 +90,6 @@ insert into Loan values
 (6020,404,4600419,400000),
 (6008,404,4600408,100000);
 
-select * from Branch;
-select * from Savings;
-select * from Loan;
-select * from Customer;
 
 /* PART a */
 /*
@@ -114,18 +110,32 @@ where Loan.lbranch_id = Branch.branch_id and Loan.customer_id = Customer.custome
 
 
 /* PART b */
-select Customer.customer_id as 'With_Loan_account_in_Alappuzha', customer_name, customer_city from Loan, Branch, Customer
-where Loan.lbranch_id = Branch.branch_id and Customer.customer_id = Loan.customer_id and Branch.branch_city = 'Alappuzha';
-
-select Customer.customer_id as 'With_Savings_account_in_Alappuzha', customer_name, customer_city from Savings, Branch, Customer
-where Savings.sbranch_id = Branch.branch_id and Customer.customer_id = Savings.customer_id and Branch.branch_city = 'Alappuzha';
+select Customer.customer_id , customer_name as 'With_Savings_account_in_Kottayam', customer_city from Savings, Branch, Customer
+where Savings.sbranch_id = Branch.branch_id and Customer.customer_id = Savings.customer_id and Branch.branch_city = 'Kottayam';
 
 
 /* PART c */
 
+create view AllSave as
+select s.customer_id,s.sbranch_id as 'branch_id',s.savings_accno as accno,s.sbalance,b.branch_name,b.branch_city,c.customer_name,c.customer_city 
+from Savings as s,Branch as b,Customer as c
+where s.customer_id=c.customer_id and s.sbranch_id=b.branch_id;
 
+create view AllLoan as
+select s.customer_id,s.lbranch_id as 'branch_id',s.loan_accno as accno,s.lbalance,b.branch_name,b.branch_city,c.customer_name,c.customer_city 
+from Loan as s,Branch as b,Customer as c
+where s.customer_id=c.customer_id and s.lbranch_id=b.branch_id;
 
+create view AllAcc as
+(select * from AllSave
+union
+select * from AllLoan)
+order by customer_id;
 
+select distinct a1.customer_id,a1.customer_name
+from AllAcc as a1,AllAcc as a2
+where a1.customer_id=a2.customer_id and a1.branch_id!=a2.branch_id
+order by a1.customer_id;
 
 
 
@@ -146,8 +156,7 @@ group by customer_id having count(*)>1;
 select customer_id from Savings
 where sbalance=0;*/
 select * from Customer where customer_id IN (select customer_id from Loan
-group by customer_id having count(*)>1) and customer_id IN (select customer_id from Savings
-where sbalance=0);
+group by customer_id having count(*)>1) and customer_id NOT IN (select customer_id from Savings);
 
 
 /* PART f */
