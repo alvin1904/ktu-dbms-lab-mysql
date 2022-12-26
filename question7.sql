@@ -237,12 +237,39 @@ where corearea = 'CSE'
 order by s.year_of_passout;
 
 /* NINTH QUESTION */
-select 
+select year_of_admin, branch, grades, count(*) as 'Total No of grades'
+from StudentDetails s NATURAL JOIN CourseQualification c
+group by s.year_of_admin, s.branch, grades
+order by s.year_of_admin, s.branch, grades;
 
 /* TENTH QUESTION */
+/* let year be 2020*/
+select * from StudentDetails
+where year_of_admin=2020
+order by branch;
 
 /* ELEVENTH QUESTION */
+select * from StudentDetails
+order by year_of_admin, branch;
 
 /* TWELFTH QUESTION */
+select c.year, s.branch, max(total) as 'Best marks in 2021'
+from StudentDetails s NATURAL JOIN CourseQualification c
+group by c.year, s.branch
+having year=2021
+order by year, branch;
+
+select c.year, s.branch, min(total) as 'Worst marks in 2021'
+from StudentDetails s NATURAL JOIN CourseQualification c
+group by c.year, s.branch
+having year=2021
+order by year, branch;
+
+select c.year, s.branch, avg(total) as 'Avg marks in 2021'
+from StudentDetails s NATURAL JOIN CourseQualification c
+group by c.year, s.branch
+having year=2021
+order by year, branch;
+
 
 drop database d7;
