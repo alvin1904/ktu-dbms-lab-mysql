@@ -167,11 +167,6 @@ insert into FacultyDetails values ('Aswin', 'KTF11YY19', 'ecantos3@walmart.com',
 insert into FacultyDetails values ('Amalia', 'KTF37YY55', 'marling4@toplist.cz', 'Asst_Prof', '2021-08-30', '2022-09-23');
 insert into FacultyDetails values ('Shaju', 'KTF40YY60', 'clyle5@reddit.com', 'Asst_Prof', '2018-08-17', null);
 
-select * from StudentDetails;
-select * from CourseQualification;
-select * from ProjectDetails;
-select * from FacultyDetails;
-
 
 /* FIRST QUESTION */
 select name, rollno, address, year_of_admin
