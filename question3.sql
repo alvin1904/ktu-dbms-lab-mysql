@@ -46,28 +46,17 @@ group by name,roll_no,date_of_birth
 having count(*)>=2;
 
 /*FOURTH Q*/
-select count(*)
+
+select course_id
 from Student
 group by course_id
 order by count(*) desc limit 1
-into @var1;
-
-select course_id
-from Student
-group by course_id
-having count(*) = @var1
 into @var2;
 
-select count(*)
+select course_id
 from Student
 group by course_id
 order by count(*) limit 1
-into @var3;
-
-select course_id
-from Student
-group by course_id
-having count(*) = @var3
 into @var4;
 
 
