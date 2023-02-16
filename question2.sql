@@ -72,7 +72,7 @@ order by title, status;
 /* FOURTH PART */
 select *
 from Book
-where status = 'issued'
+where status != 'issued'
 order by publisher;
 
 /* LET TODAYS DATE BE 2014-12-31*/
